@@ -7,7 +7,7 @@ const mysql = require('mysql');
 const path = require('path');
 const app = express();
 
-const {getLoginPage, accCreation} = require('./routes/index.js');
+const {getLoginPage, getACP} = require('./routes/index.js');
 
 const port = 5000;
 
@@ -37,7 +37,7 @@ app.use(express.static(path.join(__dirname, 'public'))) // conf express to use t
 app.use(fileUpload()); // configure fileUpload
 
 app.get('/', getLoginPage);
-app.post('createacc', accCreation);
+app.post('acp', getACP);
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
