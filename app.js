@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const path = require('path');
 const app = express();
+const lib = require('lib');
 
 const {getLoginPage, getAddAccount, addAccount} = require('./routes/index.js');
 
@@ -37,8 +38,9 @@ app.use(express.static(path.join(__dirname, 'public'))) // conf express to use t
 app.use(fileUpload()); // configure fileUpload
 
 app.get('/', getLoginPage);
-app.get('/addacc', getAddAccount)
-app.post('/addacc', addAccount)
+app.get('/addacc', getAddAccount);
+app.post('/addacc', addAccount);
+// app.get('/delete/:username', deleteAccount);
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
