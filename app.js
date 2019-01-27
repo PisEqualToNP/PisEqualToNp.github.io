@@ -37,7 +37,7 @@ app.use(express.static(path.join(__dirname, 'public'))) // conf express to use t
 app.use(fileUpload()); // configure fileUpload
 
 app.get('/', getLoginPage);
-app.post('acp', getACP);
+app.get('/getacp', getACP);
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
