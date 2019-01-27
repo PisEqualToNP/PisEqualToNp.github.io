@@ -6,7 +6,7 @@ module.exports = {
     },
     
     getAddAccount: (req, res) => {
-        res.render('add-acc.ejs', {
+        res.render('create-acc.ejs', {
             title: "CripplingDebt | Create New Account",
         });
     },
