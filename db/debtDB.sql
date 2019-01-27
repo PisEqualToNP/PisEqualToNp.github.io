@@ -18,7 +18,7 @@ CREATE TABLE user_table (
 
 CREATE TABLE account (
   email     VARCHAR(50)    NOT NULL,
-username    VARCHAR(10) NOT NULL, 
+  username    VARCHAR(10) NOT NULL, 
   date_created   DATETIME,
   pwd      VARCHAR(255),
   last_name     VARCHAR(255),
