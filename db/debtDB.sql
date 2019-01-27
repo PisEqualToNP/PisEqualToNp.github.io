@@ -6,6 +6,7 @@ DROP TABLE IF EXISTS user_table;
 DROP TABLE IF EXISTS account; 
 
 CREATE TABLE user_table (
+    uid  INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     userid INTEGER(100),
     name CHAR(30),
     debt DECIMAL(10,2),
@@ -26,8 +27,11 @@ username    VARCHAR(10) NOT NULL,
     PRIMARY KEY (username)
 );
 
-CREATE TABLE user_profile (
+CREATE TABLE profile_page (
     username VARCHAR(10) NOT NULL, 
+    something VARCHAR(10), 
+    PRIMARY KEY (something),
     FOREIGN KEY (username) REFERENCES user_table(username)
         ON DELETE CASCADE
 ); 
+
