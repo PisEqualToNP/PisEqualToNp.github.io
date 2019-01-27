@@ -7,8 +7,13 @@ const mysql = require('mysql');
 const path = require('path');
 const app = express();
 
+
 const {getLoginPage, getAddAccount, addAccount} = require('./routes/index.js');
+
+const {getMainPage} = require('./routes/main-page.js')
 //const {getProfilePage} = require('./routes/profile.js');
+
+
 
 const port = 5000;
 
@@ -17,7 +22,7 @@ const port = 5000;
 const db = mysql.createConnection ({
     host: 'localhost',
     user: 'root',
-    password: 'nickjon20',
+    password: 'root',
     database: 'debtDB'
 });
 
@@ -38,10 +43,13 @@ app.use(express.static(path.join(__dirname, 'public'))) // conf express to use t
 app.use(fileUpload()); // configure fileUpload
 
 app.get('/', getLoginPage);
+
 app.get('/addacc', getAddAccount)
 app.post('/addacc', addAccount)
+app.get('/main', getMainPage);
 //app.get('/getprof', getProfilePage)
 //app.post('addprof', addProfilePage)
+
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
