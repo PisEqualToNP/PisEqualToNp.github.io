@@ -8,7 +8,7 @@ module.exports = {
                 return res.status(500).send(err);
                 }
             else {
-                res.render('main-page.ejs', {
+                res.render('profile.ejs', {
                 title: "Personal Profile", 
                 });
             }
