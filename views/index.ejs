@@ -13,30 +13,9 @@
 <body style = "background-image: url(https://www.halofinancial.com/HaloFinancial/media/Halo-Financial/DCI%20Images/Canadian-dollars-a-array-of-notes-Halo-Financial.jpg); background-size: 100% 200%; background-color: rgba(255,255,255,0.6); background-blend-mode: lighten; ">
 </body>
 
-<div class="container">
-    <p><br /> <br /></p>
-    <h1>Account</h1>
+<a href="/loginpage" class="btn btn-sm btn-primary"> Login </a>
 
-    <div id="form-wrapper" style="max-width:500px;margin:auto;">
 
-    <% if (typeof message != 'undefined') { %>
-        <p><%= message %></p>
-    <% } %>
-    <p><br /></p>
-        <form method="post" action="acc-settings">
-            <p>
-                <label>Username:</label>
-                <input type="text" class="form col-md-5" name="uid" required>
-            </p>
-            <p>
-                <label>Password:</label>
-                <input type="text" class="form col-md-5" name="password" required>
-            </p>
-            <p> 
-                <input type="submit" value="Login">
-            </p>
-        </form>
-    </div>
     <p><br></p>
     <a href="/addacc" class="btn btn-sm btn-primary">Create New Account</a>
 </div>
