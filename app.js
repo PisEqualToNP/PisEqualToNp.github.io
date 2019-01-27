@@ -8,6 +8,7 @@ const path = require('path');
 const app = express();
 
 const {getLoginPage, getAddAccount, addAccount} = require('./routes/index.js');
+//const {getProfilePage} = require('./routes/profile.js');
 
 const port = 5000;
 
@@ -39,6 +40,8 @@ app.use(fileUpload()); // configure fileUpload
 app.get('/', getLoginPage);
 app.get('/addacc', getAddAccount)
 app.post('/addacc', addAccount)
+//app.get('/getprof', getProfilePage)
+//app.post('addprof', addProfilePage)
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
