@@ -8,6 +8,7 @@ const path = require('path');
 const app = express();
 
 const {getLoginPage, getACP} = require('./routes/index.js');
+const {getMainPage} = require('./routes/main-page.js')
 
 const port = 5000;
 
@@ -16,7 +17,7 @@ const port = 5000;
 const db = mysql.createConnection ({
     host: 'localhost',
     user: 'root',
-    password: 'nickjon20',
+    password: 'password',
     database: 'debtDB'
 });
 
@@ -38,6 +39,7 @@ app.use(fileUpload()); // configure fileUpload
 
 app.get('/', getLoginPage);
 app.get('/getacp', getACP);
+app.get('/main', getMainPage);
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
