@@ -10,8 +10,6 @@ const app = express();
 
 const {getLoginPage, getAddAccount, addAccount} = require('./routes/index.js');
 const {getMainPage} = require('./routes/main-page.js')
-const {getLentPage} = require('./routes/lent.js')
-const {getDebtPage} = require('./routes/debt.js')
 
 const port = 5000;
 
@@ -44,8 +42,6 @@ app.get('/', getLoginPage);
 app.get('/addacc', getAddAccount);
 app.post('/addacc', addAccount);
 app.get('/main', getMainPage);
-app.get('/lent', getLentPage);
-app.get('/debt', getDebtPage);
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
