@@ -13,5 +13,9 @@ module.exports = {
             });
         });
     },
+    
+    accCreation: (req, res) => {
+        let query = "SELECT * FROM 'user' "
+    }
 };
 

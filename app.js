@@ -7,6 +7,8 @@ const mysql = require('mysql');
 const path = require('path');
 const app = express();
 
+const {getLoginPage, accCreation} = require('./routes/index.js');
+
 const port = 5000;
 
 // create connection to database
@@ -34,7 +36,8 @@ app.use(bodyParser.json()); // parse form data client
 app.use(express.static(path.join(__dirname, 'public'))) // conf express to use the public folder
 app.use(fileUpload()); // configure fileUpload
 
-app.get('/', getLogin);
+app.get('/', getLoginPage);
+app.post('createacc', accCreation);
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
