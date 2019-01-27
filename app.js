@@ -8,11 +8,7 @@ const path = require('path');
 const app = express();
 
 
-const {getLoginPage, getAddAccount, addAccount} = require('./routes/index.js');
-
-const {getMainPage} = require('./routes/main-page.js')
-//const {getProfilePage} = require('./routes/profile.js');
-
+const {getHome, getLoginPage, getAddAccount, addAccount, getProfilePage} = require('./routes/index.js');
 
 
 const port = 5000;
@@ -22,7 +18,7 @@ const port = 5000;
 const db = mysql.createConnection ({
     host: 'localhost',
     user: 'root',
-    password: 'root',
+    password: 'nickjon20',
     database: 'debtDB'
 });
 
@@ -42,11 +38,13 @@ app.use(bodyParser.json()); // parse form data client
 app.use(express.static(path.join(__dirname, 'public'))) // conf express to use the public folder
 app.use(fileUpload()); // configure fileUpload
 
-app.get('/', getLoginPage);
+app.get('/', getHome);
+app.get('/loginpage', getLoginPage)
+app.get('/login', getProfilePage)
+
 
 app.get('/addacc', getAddAccount)
 app.post('/addacc', addAccount)
-app.get('/main', getMainPage);
 //app.get('/getprof', getProfilePage)
 //app.post('addprof', addProfilePage)
 

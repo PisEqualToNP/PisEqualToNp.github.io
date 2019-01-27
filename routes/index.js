@@ -1,6 +1,12 @@
 module.exports = {
+    getHome:(req,res) => {
+        res.render('index.ejs', {
+            title: "CripplingDebt | Welcome",
+        })
+    },
+    
     getLoginPage: (req, res) => {
-            res.render('index.ejs', {
+            res.render('login-page.ejs', {
                 title: "CripplingDebt | Login",
         });
     },
@@ -46,7 +52,23 @@ module.exports = {
                 });
             }
         });
-    }   
+    },
+        
+    getProfilePage: (req, res) => {
+        let uid = req.params.id;
+        let createProfileQuery = "SELECT * FROM profile_page WHERE'" + uid + "'";
+        
+        db.query(createProfileQuery, (err, result) => {
+            if (err) {
+                return res.status(500).send(err);
+                }
+            else {
+                res.render('profile.ejs', {
+                title: "Personal Profile", 
+                });
+            }
+        });   
+    }
 }
 
 
