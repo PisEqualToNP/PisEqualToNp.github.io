@@ -22,11 +22,19 @@ db.connect((err) => {
     if (err) {
         throw err;
     }
-    console.log('Connected to MarketDB!');
+    console.log('Connected to debtDB!');
 });
 global.db = db;
 
+app.set('port', process.env.port || port); // express will use specified port
+app.set('views', __dirname + '/views'); // express will look at /views folder to render view
+app.set('view engine', 'ejs') // configure template engine
+app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.json()); // parse form data client
+app.use(express.static(path.join(__dirname, 'public'))) // conf express to use the public folder
+app.use(fileUpload()); // configure fileUpload
 
+app.get('/', getLogin);
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
