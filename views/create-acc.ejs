@@ -1,3 +1,46 @@
-<%# Create new account form %>
 <% include partials/header.ejs %>
 
+
+<head>
+    
+    <style type="text/css">
+        body{
+            text-align: center;
+        }
+    </style>
+    
+</head>
+
+<div class="container">
+    <div class ="container">
+        <p><br> <br></p>
+        <h1>Account Registration</h1>
+        <p><br> <br></p>
+        <form method="post" action="acc-settings">
+            <link rel="stylesheet" type="text/css" href="style.css">
+            <p>
+                <label>Email Address:</label>
+                <input type="text" name="email" required>
+            </p>
+            <p>
+                <label>Password:</label>
+                <input type="text" name="password" required>
+            </p>
+            <p>
+                <label>First Name:</label>
+                <input type="text" name="first-name" required>
+            </p>
+            <p>
+                <label>Last Name:</label>
+                <input type="text" name="last-name" required>
+            </p>
+            <p>
+                <label>Phone Number:</label>
+                <input type="text" name="phone-number" required>
+            </p>
+            <p>
+                <input type="submit" value="Sign Up">
+            </p>
+        </form>
+    </div>
+</div>
