@@ -1,5 +1,5 @@
 module.exports = {
-    getHomePage: (req, res) => {
+    getLoginPage: (req, res) => {
         let query = "SELECT * FROM `user` ORDER BY userid ASC"; // query database to get all the players
 
         // execute query
@@ -8,7 +8,7 @@ module.exports = {
                 res.redirect('/');
             }
             res.render('index.ejs', {
-                title: "Welcome to Socka | View Players",
+                title: "CripplingDebt | Login",
                 players: result
             });
         });
