@@ -9,7 +9,11 @@ const app = express();
 
 
 const {getLoginPage, getAddAccount, addAccount} = require('./routes/index.js');
+
 const {getMainPage} = require('./routes/main-page.js')
+//const {getProfilePage} = require('./routes/profile.js');
+
+
 
 const port = 5000;
 
@@ -39,9 +43,13 @@ app.use(express.static(path.join(__dirname, 'public'))) // conf express to use t
 app.use(fileUpload()); // configure fileUpload
 
 app.get('/', getLoginPage);
-app.get('/addacc', getAddAccount);
-app.post('/addacc', addAccount);
+
+app.get('/addacc', getAddAccount)
+app.post('/addacc', addAccount)
 app.get('/main', getMainPage);
+//app.get('/getprof', getProfilePage)
+//app.post('addprof', addProfilePage)
+
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
