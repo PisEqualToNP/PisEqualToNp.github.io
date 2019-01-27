@@ -1,21 +1,15 @@
 module.exports = {
     getLoginPage: (req, res) => {
-        let query = "SELECT * FROM `user` ORDER BY userid ASC"; // query database to get all the players
-
-        // execute query
-        db.query(query, (err, result) => {
-            if (err) {
-                res.redirect('/');
-            }
             res.render('index.ejs', {
                 title: "CripplingDebt | Login",
-                players: result
-            });
         });
     },
     
-    accCreation: (req, res) => {
-        let query = "SELECT * FROM 'user' "
+
+    getACP: (req, res) => {
+        res.render('create-acc.ejs', {
+            title: "CripplingDebt | Create Account",            
+        })
     }
 };
 
