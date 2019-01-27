@@ -1,27 +1,46 @@
 <% include partials/header.ejs %>
-    <div class="container">
-        <form class="add-player-form" action="" method="post" enctype="multipart/form-data">
-            <div class="form-row">
-                <div class="form-group col-md-4">
-                    <input type="text" class="form-control" name="first_name" id="first-name" placeholder="First Name" required>
-                </div>
-                <div class="form-group col-md-4">
-                    <input type="text" class="form-control" name="last_name" id="last-name" placeholder="Last Name" required>
-                </div>
-                <div class="form-group col-md-4">
-                    <input type="text" class="form-control" name="user_id" id="u_id" placeholder="User ID" required>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <input type="text" class="form-control" name="password" id="password" placeholder="Password" required>
-                </div>
-                <div class="form-group col-md-6">
-                    <input type="text" class="form-control" name="birthdate" id="birthdate" placeholder="Birthdate (Y-M-D)" required>
-                </div>
-            </div>
-    <button type="submit" class="btn btn-primary float-right">Create account!</button>        </form>
+
+
+<head>
+    
+    <style type="text/css">
+        body{
+            text-align: center;
+        }
+    </style>
+    
+</head>
+
+<div class="container">
+    <div class ="container">
+        <p><br> <br></p>
+        <h1>Account Registration</h1>
+        <p><br> <br></p>
+        <form method="post" action="acc-settings">
+            <link rel="stylesheet" type="text/css" href="style.css">
+            <p>
+                <label>Email Address:</label>
+                <input type="text" name="email" required>
+            </p>
+            <p>
+                <label>Password:</label>
+                <input type="text" name="password" required>
+            </p>
+            <p>
+                <label>First Name:</label>
+                <input type="text" name="first-name" required>
+            </p>
+            <p>
+                <label>Last Name:</label>
+                <input type="text" name="last-name" required>
+            </p>
+            <p>
+                <label>Phone Number:</label>
+                <input type="text" name="phone-number" required>
+            </p>
+            <p>
+                <input type="submit" value="Sign Up">
+            </p>
+        </form>
     </div>
 </div>
-</body>
-</html>
