@@ -16,22 +16,27 @@
 <div class="container">
     <p><br /> <br /></p>
     <h1>Account</h1>
+
+    <div id="form-wrapper" style="max-width:500px;margin:auto;">
+
     <% if (typeof message != 'undefined') { %>
         <p><%= message %></p>
     <% } %>
     <p><br /></p>
-    <form method="post" action="acc-settings">
-        <p>
-            <label>Username:</label>
-            <input type="text" name="uid" required>
-        </p>
-        <p>
-            <label>Password:</label>
-            <input type="text" name="password" required>
-        </p>
-        <p>
-            <input type="submit" value="Login">
-        </p>
-    </form>
+        <form method="post" action="acc-settings">
+            <p>
+                <label>Username:</label>
+                <input type="text" class="form col-md-5" name="uid" required>
+            </p>
+            <p>
+                <label>Password:</label>
+                <input type="text" class="form col-md-5" name="password" required>
+            </p>
+            <p> 
+                <input type="submit" value="Login">
+            </p>
+        </form>
+    </div>
+    <p><br></p>
     <a href="/addacc" class="btn btn-sm btn-primary">Create New Account</a>
 </div>
