@@ -14,12 +14,12 @@ CREATE TABLE user (
 );
 
 CREATE TABLE account (
-  id  INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   email     VARCHAR(255)    NOT NULL,
+username    VARCHAR(20) NOT NULL, 
   create_date   DATETIME    NOT NULL,
-  password      VARCHAR(255)   NOT NULL,
+  pwd      VARCHAR(255)   NOT NULL,
   last_name     VARCHAR(255),
   first_name    VARCHAR(255),
-  street        VARCHAR(255),
-  phone         VARCHAR(25),
+    phone         VARCHAR(25),
+    PRIMARY KEY (username)
 );
