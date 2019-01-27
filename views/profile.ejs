@@ -13,15 +13,15 @@
             </tr>
         </thead>
         <tbody>
-            <% players.forEach((player, index) => { %>
+            <% users.forEach((user, index) => { %>
                 <% if (player.debt > 0) { %>
                     <tr>
-                <th scope="row">player.name</th>
-                <td style="text-align: left">player.debt</td>
-                <td style="text-align: center">player.duedate</td>
-                <td style="text-align: center">player.rating</td>
-                <td style="text-align: center">player.description</td>
-                <td><a href="/delete/<$ player.name $>" class="btn btn-sm btn-danger">Delete</a>
+                <th scope="row">user.name</th>
+                <td style="text-align: left">user.debt</td>
+                <td style="text-align: center">user.duedate</td>
+                <td style="text-align: center">user.rating</td>
+                <td style="text-align: center">user.description</td>
+                <td><a href="/delete/<$ user.name $>" class="btn btn-sm btn-danger">Delete</a>
                 </td>
                     </tr>
                 <% } %>
@@ -39,14 +39,14 @@
             </tr>
         </thead>
         <tbody>
-            <% players.forEach((player, index) => { %>
+            <% users.forEach((user, index) => { %>
             <% if (player.debt < 0) { %>
                 <tr>
-                <th scope="row">post.name</th>
-                <td style="text-align: left">post.debt</td>
-                <td style="text-align: center">post.duedate</td>
-                <td style="text-align: center">post.rating</td>
-                <td style="text-align: center">post.description</td>
+                <th scope="row">user.name</th>
+                <td style="text-align: left">user.debt</td>
+                <td style="text-align: center">user.duedate</td>
+                <td style="text-align: center">user.rating</td>
+                <td style="text-align: center">user.description</td>
                 </tr>
                <% } %>
             <% }) %>
