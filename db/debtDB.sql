@@ -13,4 +13,3 @@ CREATE TABLE user (
     PRIMARY KEY (userid)
 );
 
-
