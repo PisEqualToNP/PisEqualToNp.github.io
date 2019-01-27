@@ -22,7 +22,7 @@ const port = 5000;
 const db = mysql.createConnection ({
     host: 'localhost',
     user: 'root',
-    password: 'root',
+    password: 'password',
     database: 'debtDB'
 });
 
