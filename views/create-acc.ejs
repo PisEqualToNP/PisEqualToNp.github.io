@@ -13,44 +13,59 @@
     
 </head>
 
-  <form class="add-post-form" action="" method="post" enctype="multipart/form-data">
-    <div class="form-row">
-      <div class ="form-group col-md-4">
-        <p>
-            <label>Username:</label>
-            <input type="text" class="form-control" name="username" id="username" placeholder="username" required>
-        </p>
-      </div>
-      <div class ="form-group col-md-4">
-        <p>
-                <label>Email Account:</label>
-                <input type="text" class="form-control" name="email" id="email" placeholder="email" required>
+
+<div class="container">
+    <p><br /> <br /></p>
+    <h1>Account Registration</h1>
+    <p><br></p>
+    <div id="form-wrapper" style="max-width:500px;margin:auto;">
+
+    <form class="add-post-form" action="" method="post" enctype="multipart/form-data">
+        <div class="form-row">
+          <div class ="form-group col-md-12">
+            <p>
+                <label>Username:</label>
+                <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>
             </p>
-      </div>
-      <div class ="form-group col-md-6">
-        <p>
-                <label>Password:</label>
-                <input type="text" class="form-control" name="password" id="pwd" placeholder="password" required>
-            </p>
-      </div>
-      <div class ="form-group col-md-10">
-        <p>
-                <label>First Name:</label>
-                <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" required>
-            </p>
-      </div>
-      <div class ="form-group col-md-10">
-        <p>
-                <label>Last Name:</label>
-                <input type="text" class="form-control" name="last_name" id="last_name" placeholder="first name" required>
-            </p>
-      </div>
-      <div class="form-group col-md-6">
-        <p>
-                <label>Phone Number:</label>
-                <input type="text" class="form-control" name="phone" id="phone" placeholder="phone number" required>
-            </p>
-      </div>
-      <button type="submit" class="btn btn-primary float-right"> Add New Post</button>
-      </div>
- </form>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class ="form-group col-md-6 col-sm-3=">
+            <p>
+                    <label>Email Account:</label>
+                    <input type="text" class="form-control" name="email" id="email" placeholder="Email" required>
+                </p>
+          </div>
+          <div class ="form-group col-md-6">
+            <p>
+                    <label>Password:</label>
+                    <input type="password" class="form-control" name="password" id="pwd" placeholder="Password" required>
+                </p>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class ="form-group col-md-4">
+            <p>
+                    <label>First Name:</label>
+                    <input type="text" class="form-control" name="first_name" id="first_name" placeholder="First Name" required>
+                </p>
+          </div>
+          <div class ="form-group col-md-4">
+            <p>
+                    <label>Last Name:</label>
+                    <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last Name" required>
+                </p>
+          </div>
+          <div class="form-group col-md-4">
+            <p>
+                    <label>Phone Number:</label>
+                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone Number" required>
+                </p>
+          </div>
+        </div>
+        <br>
+          <button type="submit" class="btn btn-primary float-center"> Add New Post</button>
+    </form>
+    </div>
+</div>
+</div>
